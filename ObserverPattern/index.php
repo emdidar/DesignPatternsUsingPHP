@@ -1,9 +1,11 @@
 <?php
 include_once 'BankAccount.php';
 include_once 'SMSNotifier.php';
+include_once 'EmailNotifier.php';
 
 $bankAccount = new BankAccount();
 $smsNotifier = new SMSNotifier();
+$emailNotifier = new EmailNotifier();
 
 interface Observable
 {
@@ -16,5 +18,6 @@ interface Observer
 }
 
 $bankAccount->attach($smsNotifier);
+$bankAccount->attach($emailNotifier);
 $bankAccount->withdraw(500);
 $bankAccount->deposit(1000);
