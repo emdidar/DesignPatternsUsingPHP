@@ -1,6 +1,7 @@
 <?php
 
-class BankAccount implements Observable{
+class BankAccount implements Observable
+{
     private $observers=[];
     function attach(Observer $observer)
     {
