@@ -19,5 +19,6 @@ interface Observer
 
 $bankAccount->attach($smsNotifier);
 $bankAccount->attach($emailNotifier);
+
 $bankAccount->withdraw(500);
 $bankAccount->deposit(1000);
